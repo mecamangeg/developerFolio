@@ -25,8 +25,7 @@ const greeting = {
   subTitle: emoji(
     "A Lawyer by profession with a passion for solving complex problems through code ⚖️💻 I bridge the gap between legal expertise and technology to build innovative CRM systems, web applications, and desktop solutions using Next.js / tRPC / Prisma and the T3 Stack."
   ),
-  resumeLink:
-    "", // Set to empty to hide the button
+  resumeLink: "", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -52,9 +51,7 @@ const skillsSection = {
   title: "What I do",
   subTitle: "LAWYER & FULL STACK DEVELOPER BUILDING SOLUTIONS THAT MATTER",
   skills: [
-    emoji(
-      "⚡ Build custom CRM systems tailored to client business needs"
-    ),
+    emoji("⚡ Build custom CRM systems tailored to client business needs"),
     emoji("⚡ Develop web applications and Electron desktop solutions"),
     emoji(
       "⚡ Create full-stack applications using the T3 Stack (Next.js, tRPC, Prisma)"
@@ -118,7 +115,8 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "National University of Singapore - Lee Kuan Yew School of Public Policy",
+      schoolName:
+        "National University of Singapore - Lee Kuan Yew School of Public Policy",
       logo: require("./assets/images/harvardLogo.png"),
       subHeader: "Senior Executives Class",
       duration: "",
@@ -150,7 +148,8 @@ const educationInfo = {
       descBullets: []
     },
     {
-      schoolName: "University of the Philippines - Information Technology Development Center",
+      schoolName:
+        "University of the Philippines - Information Technology Development Center",
       logo: require("./assets/images/stanfordLogo.png"),
       subHeader: "IT Development Program",
       duration: "",
@@ -217,13 +216,15 @@ const bigProjects = {
     {
       image: require("./assets/images/saayaHealthLogo.webp"),
       projectName: "Custom CRM System",
-      projectDesc: "A tailored Customer Relationship Management system built with Next.js, tRPC, and Prisma to help businesses manage their client relationships effectively.",
+      projectDesc:
+        "A tailored Customer Relationship Management system built with Next.js, tRPC, and Prisma to help businesses manage their client relationships effectively.",
       footerLink: []
     },
     {
       image: require("./assets/images/nextuLogo.webp"),
       projectName: "Business Management Web App",
-      projectDesc: "Full-stack web application for streamlining business operations and workflow automation using the T3 Stack.",
+      projectDesc:
+        "Full-stack web application for streamlining business operations and workflow automation using the T3 Stack.",
       footerLink: []
     }
   ],
@@ -294,9 +295,7 @@ const podcastSection = {
   subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
 
   // Please Provide with Your Podcast embeded Link
-  podcast: [
-    ""
-  ],
+  podcast: [""],
   display: false // Set false to hide this section, defaults to true
 };
 
