@@ -21,6 +21,12 @@ npm build
 # Run tests
 npm test
 
+# Run tests in watch mode
+npm test -- --watch
+
+# Run a specific test file
+npm test -- <test-name-pattern>
+
 # Format code with Prettier
 npm run format
 
@@ -139,12 +145,35 @@ To customize the portfolio:
 - **Formatting**: Use `npm run format` to format all code, or `npm run check-format` to verify
 - **Testing**: Tests use Jest and Enzyme (`npm test`)
 
+## GitHub Actions Workflows
+
+The project includes two automated workflows:
+
+**`.github/workflows/deploy.yml`** - Build and Deploy:
+- Triggers on: push to master, manual dispatch, or weekly (Monday at 12:00 UTC)
+- Automatically fetches GitHub data using `GITHUB_TOKEN`
+- Builds the project and deploys to `gh-pages` branch
+- **Note**: Update `MEDIUM_USERNAME` in this file if using Medium integration
+
+**`.github/workflows/prettier.yml`** - Format Check:
+- Triggers on: all pushes and pull requests to master
+- Runs `npm run check-format` to verify code formatting
+- Ensures code meets Prettier standards before merge
+
 ## Deployment
 
-The project is configured for deployment to GitHub Pages:
+The project supports two deployment methods:
+
+**Option 1: Manual Deployment** (via npm script):
 - Update `homepage` in `package.json` to match your GitHub Pages URL
 - Run `npm run deploy` to build and deploy to the `master` branch
-- Alternatively, GitHub Actions can be configured for automatic weekly deploys (see README)
+- Requires local environment setup with `.env` file
+
+**Option 2: Automated Deployment** (via GitHub Actions):
+- The `.github/workflows/deploy.yml` workflow automatically deploys to `gh-pages` branch
+- Triggers on push to master, manual dispatch, or weekly schedule
+- No local `.env` required - uses GitHub secrets automatically
+- Configure `MEDIUM_USERNAME` directly in the workflow file if needed
 
 ## Important Notes
 
